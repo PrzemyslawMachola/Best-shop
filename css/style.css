@@ -246,3 +246,168 @@ h2 {
     left: 60px;
     top: 100px;
 }
+
+.pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pricing__container {
+    display: flex;
+}
+.pricing__column {
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 35px 0 80px 0;
+    margin: 50px 30px;
+    position: relative;
+}
+.pricing__column__red {
+    border-color: var(--color-red);
+}
+.pricing__column__blue {
+    border-color: var(--color-blue);
+}
+.pricing__column__green {
+    border-color: var(--color-green);
+}
+.price-variant {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+.price {
+    font-family: var(--font-open-sans);
+    font-size: 3em;
+    font-weight: 300;
+    padding: 14px 0 5px;
+}
+.price__red {
+    color: var(--color-red);
+}
+.price__blue {
+   color: var(--color-blue);
+}
+.price__green {
+   color: var(--color-green);
+}
+.price__description {
+    font-size: 0.7em;
+    font-weight: 700;
+}
+.features {
+    margin-top: 50px;
+}
+.feature {
+    font-family: var(--font-open-sans);
+    font-size: 0.9em;
+    line-height: 2.5em;
+    text-align: center;
+}
+
+.included::before {
+    content: url("../assets/Ckechmark-1.svg");
+    padding-right: 10px;
+}
+.not-included::before {
+    content: url("../assets/Close.svg");
+    padding-right: 10px;
+}
+
+.pricing__button {
+    font-family: var(--font-open-sans);
+    color: var(--color-white);
+    font-weight: 700;
+    border-radius: 25px;
+    padding: 16px 57px;
+    text-decoration: none;
+    position: absolute;
+    bottom: -25px;
+}
+
+
+
+
+.contact {
+    margin: 100px auto 60px;
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.contact__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.contact__title {
+    margin: 0;
+}
+.contact__details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form {
+    width: 440px;
+    position: relative;
+}
+
+
+.input__box {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid var(--color-grey);
+    margin-bottom: 40px;
+}
+.input__label {
+    font-size: 0.6em;
+    color: var(--color-blue);
+    letter-spacing: 0.5em;
+}
+
+.check {
+    display: flex;
+    margin-bottom: 75px;
+}
+.checkbox-message {
+    font-family: var(--font-open);
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--grey);
+    text-transform: none;
+}
+
+.send__button {
+    font-family: var(--font-open-sans);
+    color: var(--color-white);
+    font-weight: 700;
+    border-radius: 25px;
+    padding:16px 95px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+
+
+footer {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px -5px 40px var(--color-grey-shadow);
+}
+
+.logo__footer {
+    font-weight: 300;
+    font-size: 1.6em;
+    color: var(--color-blue);
+
+}
