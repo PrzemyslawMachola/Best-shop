@@ -47,6 +47,149 @@ input {
   border-radius: 0;
 }
 
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+.open-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  box-shadow: 0 3px 6px #00000029;
+}
+
+.head-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 300;
+  font-size: 2em;
+  color: #08A6E4;
+  padding: 19px;
+}
+
+nav {
+  padding: 19px;
+}
+
+.menu {
+  display: none;
+  transition: max-height 0.5s ease-out;
+}
+
+.menu-icon {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0.4;
+}
+
+.menu-icon .navicon {
+  background: #08A6E4;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+  background: #08A6E4;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.menu-icon .navicon:before {
+  top: 6px;
+}
+
+.menu-icon .navicon:after {
+  top: -6px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-btn:checked ~ .menu {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+}
+.menu-btn:checked ~ .menu .menu li {
+  display: block;
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #000000;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.menu-btn:checked ~ .menu .menu li:hover {
+  color: #000000;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+h1 {
+  font-size: 3em;
+  margin-top: 130px;
+}
+
+.open-section-text {
+  font-family: var(--font-open-sans);
+  font-size: 1em;
+  padding: 20px 0;
+}
+
+.open-button {
+  text-decoration: none;
+  color: #FFFFFF;
+  background: #08A6E4;
+  font-weight: 700;
+  padding: 22px 157px;
+  border-radius: 60px;
+  margin-top: 20px;
+}
+
+.open-section img {
+  width: 100%;
+}
+
 footer {
   height: 90px;
   display: flex;
