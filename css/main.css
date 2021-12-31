@@ -60,6 +60,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 @media screen and (min-width: 1352px) {
   .open {
@@ -228,7 +229,18 @@ body {
   }
 }
 .open__image {
-  width: 100%;
+  width: 200%;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .open__image {
+    width: 150%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .open__image {
+    width: 100%;
+  }
 }
 
 footer {

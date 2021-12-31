@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   @include large {
     max-width: 1352px;
   }
@@ -186,7 +187,14 @@ nav {
   }
 }
 &__image {
-  width: 100%;
+  width: 200%;
+  overflow: hidden;
+  @include tablet {
+    width: 150%;
+  }
+  @include desktop {
+    width: 100%;
+  }
 }
 
 }
