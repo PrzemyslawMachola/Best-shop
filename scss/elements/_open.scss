@@ -1,10 +1,14 @@
-.open-section {
+.open {
   width: 100%;
   height: 100vh;
+  padding: 0 15px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+  @include large {
+    max-width: 1352px;
+  }
 
 header {
   width: 100%;
@@ -16,6 +20,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -27,41 +32,47 @@ header {
 
 nav {
   padding: 19px;
+  @include desktop {
+    padding: 0;
+  }
 }
+
 .menu {
   display: none;
   transition: max-height .5s ease-out;
 
-  //@include desktop {
-  //  display: flex;
-  //  .menu li {
-  //    font-family: $font-open-sans;
-  //    font-weight: 700;
-  //    font-size: 0.7em;
-  //    color: $color-text;
-  //    text-transform: uppercase;
-  //    padding: 27px 5px;
-  //    margin: 0 40px;
-  //    border-bottom: 4px solid $color-text-buttons;
-  //  }
-  //  .menu li:hover {
-  //    color: $color-text;
-  //    border-bottom: 4px solid $color-main;
-  //  }
-  //}
+  @include desktop {
+    display: flex;
+    & a {
+      text-decoration: none;
+      font-family: $font-open-sans;
+      font-weight: 700;
+      font-size: 0.7em;
+      color: $color-text-accent;
+      text-transform: uppercase;
+      padding: 27px 5px;
+      margin: 0 40px;
+      border-bottom: 4px solid transparent;
+
+    &:hover {
+      color: $color-text;
+      border-bottom: 4px solid $color-main;
+    }
+    }
+  }
 }
 
 
 
 .menu-icon {
   cursor: pointer;
-  //padding: 20px;
+  padding: 19px;
   user-select: none;
   opacity: 0.4;
 
-  //@include desktop {
-  //  display: none;
-  //}
+  @include desktop {
+    display: none;
+  }
 }
 
 .menu-icon .navicon {
@@ -101,19 +112,24 @@ nav {
   display: flex;
   width: 100%;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   background: white;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  padding: 19px;
+  box-shadow: 0 3px 6px $color-grey-shadow;
 
-
-  .menu li {
+  & a {
     display: block;
     text-decoration: none;
-    padding: 10px 30px;
-    color: $color-text;
-    font-size: 0.9rem;
-    font-weight: 400;
-
-
+    padding: 10px 0;
+    color: $color-text-accent;
+    font-size: 0.7rem;
+    font-weight: 700;
+    font-family: $font-open-sans;
+    text-transform: uppercase;
+    letter-spacing: .2em;
 
     &:hover {
       color: $color-text;
@@ -141,26 +157,36 @@ nav {
 
 
 
-h1 {
+&__title {
   font-size: 3em;
   margin-top: 130px;
 }
-.open-section-text {
+&__text {
   font-family: var(--font-open-sans);
   font-size: 1em;
-  padding: 20px 0;
+  padding: 20px 30px;
+  text-align: center;
+  @include tablet {
+    padding: 20px 0;
+  }
 }
-.open-button {
+&__button {
   text-decoration: none;
+  text-align: center;
   color: $color-text-buttons;
   background: $color-main;
   font-weight: 700;
-  padding: 22px 157px;
+  padding: 22px 0;
+  min-width: 300px;
+  max-width: 430px;
   border-radius: 60px;
   margin-top: 20px;
+  @include tablet {
+    min-width: 430px;
+  }
 }
-.open-section img {
+&__image {
   width: 100%;
 }
 
-
+}

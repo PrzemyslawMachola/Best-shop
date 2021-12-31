@@ -52,52 +52,84 @@ body {
   font-size: 16px;
 }
 
-.open-section {
+.open {
   width: 100%;
   height: 100vh;
+  padding: 0 15px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-header {
+@media screen and (min-width: 1352px) {
+  .open {
+    max-width: 1352px;
+  }
+}
+.open header {
   width: 100%;
   box-shadow: 0 3px 6px #00000029;
 }
-
-.head-container {
+.open .head-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
-
-.logo {
+.open .logo {
   font-weight: 300;
   font-size: 2em;
   color: #08A6E4;
   padding: 19px;
 }
-
-nav {
+.open nav {
   padding: 19px;
 }
-
-.menu {
+@media screen and (min-width: 992px) {
+  .open nav {
+    padding: 0;
+  }
+}
+.open .menu {
   display: none;
   transition: max-height 0.5s ease-out;
 }
-
-.menu-icon {
+@media screen and (min-width: 992px) {
+  .open .menu {
+    display: flex;
+  }
+  .open .menu a {
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 0.7em;
+    color: #A5A5A5;
+    text-transform: uppercase;
+    padding: 27px 5px;
+    margin: 0 40px;
+    border-bottom: 4px solid transparent;
+  }
+  .open .menu a:hover {
+    color: #000000;
+    border-bottom: 4px solid #08A6E4;
+  }
+}
+.open .menu-icon {
   cursor: pointer;
+  padding: 19px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   opacity: 0.4;
 }
-
-.menu-icon .navicon {
+@media screen and (min-width: 992px) {
+  .open .menu-icon {
+    display: none;
+  }
+}
+.open .menu-icon .navicon {
   background: #08A6E4;
   display: block;
   height: 2px;
@@ -105,9 +137,8 @@ nav {
   transition: background 0.2s ease-out;
   width: 18px;
 }
-
-.menu-icon .navicon:before,
-.menu-icon .navicon:after {
+.open .menu-icon .navicon:before,
+.open .menu-icon .navicon:after {
   background: #08A6E4;
   content: "";
   display: block;
@@ -116,77 +147,87 @@ nav {
   transition: all 0.2s ease-out;
   width: 100%;
 }
-
-.menu-icon .navicon:before {
+.open .menu-icon .navicon:before {
   top: 6px;
 }
-
-.menu-icon .navicon:after {
+.open .menu-icon .navicon:after {
   top: -6px;
 }
-
-.menu-btn {
+.open .menu-btn {
   display: none;
 }
-
-.menu-btn:checked ~ .menu {
+.open .menu-btn:checked ~ .menu {
   display: flex;
   width: 100%;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   background: white;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  padding: 19px;
+  box-shadow: 0 3px 6px #00000029;
 }
-.menu-btn:checked ~ .menu .menu li {
+.open .menu-btn:checked ~ .menu a {
   display: block;
   text-decoration: none;
-  padding: 10px 30px;
-  color: #000000;
-  font-size: 0.9rem;
-  font-weight: 400;
+  padding: 10px 0;
+  color: #A5A5A5;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
-.menu-btn:checked ~ .menu .menu li:hover {
+.open .menu-btn:checked ~ .menu a:hover {
   color: #000000;
 }
-
-.menu-btn:checked ~ .menu-icon .navicon {
+.open .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
 }
-
-.menu-btn:checked ~ .menu-icon .navicon:before {
+.open .menu-btn:checked ~ .menu-icon .navicon:before {
   transform: rotate(-45deg);
 }
-
-.menu-btn:checked ~ .menu-icon .navicon:after {
+.open .menu-btn:checked ~ .menu-icon .navicon:after {
   transform: rotate(45deg);
 }
-
-.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+.open .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.open .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
-
-h1 {
+.open__title {
   font-size: 3em;
   margin-top: 130px;
 }
-
-.open-section-text {
+.open__text {
   font-family: var(--font-open-sans);
   font-size: 1em;
-  padding: 20px 0;
+  padding: 20px 30px;
+  text-align: center;
 }
-
-.open-button {
+@media screen and (min-width: 768px) {
+  .open__text {
+    padding: 20px 0;
+  }
+}
+.open__button {
   text-decoration: none;
+  text-align: center;
   color: #FFFFFF;
   background: #08A6E4;
   font-weight: 700;
-  padding: 22px 157px;
+  padding: 22px 0;
+  min-width: 300px;
+  max-width: 430px;
   border-radius: 60px;
   margin-top: 20px;
 }
-
-.open-section img {
+@media screen and (min-width: 768px) {
+  .open__button {
+    min-width: 430px;
+  }
+}
+.open__image {
   width: 100%;
 }
 

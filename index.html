@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<section class="open-section">
+<section class="open">
     <header>
         <div class="head-container">
             <div class="logo">BestShop</div>
@@ -24,20 +24,20 @@
                 <input class="menu-btn" type="checkbox" id="menu-btn"/>
                 <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
                 <ul class="menu">
-                    <li>why us</li>
-                    <li>benefits</li>
-                    <li>prices</li>
-                    <li>contact</li>
+                    <li><a href="#stats">why us</a></li>
+                    <li><a href="#benefits">benefits</a></li>
+                    <li><a href="#pricing">prices</a></li>
+                    <li><a href="#contact">contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <h1>Sell More!</h1>
-    <p class="open-section-text">Open shop on our platform and increase your sales</p>
-    <a href="#" class="open-button background-blue">Open your shop</a>
-    <img src="./assets/Background.png">
+    <h1 class="open__title">Sell More!</h1>
+    <p class="open__text">Open shop on our platform and increase your sales</p>
+    <a href="#" class="open__button background-blue">Open your shop</a>
+    <img class="open__image" src="./assets/Background.png">
 </section>
-<section class="stats">
+<section class="stats" id="stats">
     <h2>The most popular sales platform in country</h2>
     <div class="stats__container">
         <div class="stats__column">
@@ -63,7 +63,7 @@
         </div>
     </div>
 </section>
-<section class="benefits">
+<section class="benefits" id="benefits">
     <div class="benefits__container background-white">
         <div class="benefits__info1">
             <p class="benefits__title">Be always first</p>
@@ -92,7 +92,7 @@
         </div>
     </div>
 </section>
-<section class="pricing">
+<section class="pricing" id="pricing">
     <h2>Pricing</h2>
     <div class="pricing__container">
 
@@ -139,8 +139,7 @@
         </div>
     </div>
 </section>
-
-<section class="contact">
+<section class="contact" id="contact">
 
     <div class="contact__data">
         <h1 class="contact__title">Any questions?</h1>
