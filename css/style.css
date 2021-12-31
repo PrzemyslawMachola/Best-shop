@@ -15,53 +15,7 @@
 
 
 
-.stats {
-    text-align: center;
-}
 
-h2 {
-    font-size: 2em;
-    margin-top: 100px;
-}
-
-.stats__container {
-    display: flex;
-    justify-content: center;
-}
-
-.stats__column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 100px;
-}
-.circle {
-    width: 63px;
-    height: 63px;
-    border-radius: 50%;
-    position: relative;
-}
-
-.stats__img {
-    position: absolute;
-    left:30px;
-    top: 3px;
-}
-.stats__eye {
-    position: absolute;
-    left:23px;
-    top: 13px;
-}
-.stats__value {
-    font-size: 1.3em;
-    font-weight: 800;
-    letter-spacing: 5px;
-    padding: 18px;
-}
-.stats__description {
-    font-size: 1em;
-    color: var(--color-grey);
-}
 .benefits {
     width: 100%;
     background: var(--color-light-grey);
