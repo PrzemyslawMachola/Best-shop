@@ -1,0 +1,193 @@
+.benefits {
+  width: 100%;
+  background: $color-light-grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.benefits__container {
+  max-width: 1100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 20px 30px;
+  padding: 30px;
+  background: $color-text-buttons;
+
+  @include desktop {
+    width: 1100px;
+    height: 370px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .benefits__image-1, .benefits__image-2 {
+    position: relative;
+    flex-grow: 1;
+  }
+
+  .benefits__image-1 {
+    .macbook {
+      max-height: 220px;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+
+      @include desktop {
+        height: 220px;
+        position: absolute;
+        z-index: 1;
+        top: -60px;
+        right: 120px;
+      }
+    }
+
+    .rectangle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50px;
+      transform: rotate(45deg);
+      position: absolute;
+      z-index: 0;
+      top: -10px;
+      right: 20px;
+      background: $color-secondary;
+      @include desktop {
+        width: 200px;
+        height: 200px;
+        border-radius: 50px;
+        transform: rotate(45deg);
+        position: absolute;
+        z-index: 0;
+        top: -120px;
+        right: 100px;
+        background: $color-secondary;
+      }
+    }
+  }
+
+  .benefits__image-2 {
+    .iphone {
+      max-height: 330px;
+      position: relative;
+      z-index: 1;
+
+      @include desktop {
+        max-height: 330px;
+        position: absolute;
+        top: -150px;
+        left: 20px;
+        z-index: 1;
+      }
+    }
+    .circle-big {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0px;
+      top: -20px;
+      background: $color-main;
+      @include desktop {
+        position: absolute;
+        left: 20px;
+        top: -160px;
+      }
+    }
+  }
+
+  .benefits__image-3 {
+    background: $color-third;
+    width: 100%;
+    height: 100%;
+      @include desktop {
+        width: 440px;
+        height: 370px;
+        margin-left: 60px;
+        position: relative;
+
+
+      }
+    .trumpet {
+      height: 210px;
+      position: absolute;
+      left: 60px;
+      top: 100px;
+    }
+  }
+
+    .benefits__info-1, .benefits__info-2, .benefits__info-3 {
+
+      @include desktop {
+        width: 420px;
+        padding: 0 35px;
+        position: relative;
+      }
+    }
+
+    .benefits__info-1:before, .benefits__info-2:before, .benefits__info-3:before {
+      @include desktop {
+        content: "";
+        width: 330px;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    .benefits__info-3 {
+      background: $color-text-buttons;
+      flex-grow: 1;
+      height: 370px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .benefits__info-1:before {
+      border: 2px solid $color-secondary;
+    }
+
+    .benefits__info-2:before {
+      border: 2px solid $color-main;
+    }
+
+    .benefits__info-3:before {
+      border: 2px solid $color-third;
+    }
+  }
+
+
+  .benefits__title {
+    font-size: 2em;
+  }
+
+  .benefits__text {
+    font-size: 1em;
+    padding: 30px 0 50px 0;
+  }
+
+
+  .benefit-2 {
+    display: flex;
+    justify-content: flex-end;
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+
+  .benefit-3 {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    background: none;
+    padding: 0;
+
+  }

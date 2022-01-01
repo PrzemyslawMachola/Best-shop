@@ -319,6 +319,191 @@ body {
   color: var(--color-grey);
 }
 
+.benefits {
+  width: 100%;
+  background: #F7F7F7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.benefits__container {
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 20px 30px;
+  padding: 30px;
+  background: #FFFFFF;
+}
+@media screen and (min-width: 992px) {
+  .benefits__container {
+    width: 1100px;
+    height: 370px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+  }
+}
+.benefits__container .benefits__image-1, .benefits__container .benefits__image-2 {
+  position: relative;
+  flex-grow: 1;
+}
+.benefits__container .benefits__image-1 .macbook {
+  max-height: 220px;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (min-width: 992px) {
+  .benefits__container .benefits__image-1 .macbook {
+    height: 220px;
+    position: absolute;
+    z-index: 1;
+    top: -60px;
+    right: 120px;
+  }
+}
+.benefits__container .benefits__image-1 .rectangle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50px;
+  transform: rotate(45deg);
+  position: absolute;
+  z-index: 0;
+  top: -10px;
+  right: 20px;
+  background: #FB3B64;
+}
+@media screen and (min-width: 992px) {
+  .benefits__container .benefits__image-1 .rectangle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    transform: rotate(45deg);
+    position: absolute;
+    z-index: 0;
+    top: -120px;
+    right: 100px;
+    background: #FB3B64;
+  }
+}
+.benefits__container .benefits__image-2 .iphone {
+  max-height: 330px;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (min-width: 992px) {
+  .benefits__container .benefits__image-2 .iphone {
+    max-height: 330px;
+    position: absolute;
+    top: -150px;
+    left: 20px;
+    z-index: 1;
+  }
+}
+.benefits__container .benefits__image-2 .circle-big {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+  top: -20px;
+  background: #08A6E4;
+}
+@media screen and (min-width: 992px) {
+  .benefits__container .benefits__image-2 .circle-big {
+    position: absolute;
+    left: 20px;
+    top: -160px;
+  }
+}
+.benefits__container .benefits__image-3 {
+  background: #55DFB4;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 992px) {
+  .benefits__container .benefits__image-3 {
+    width: 440px;
+    height: 370px;
+    margin-left: 60px;
+    position: relative;
+  }
+}
+.benefits__container .benefits__image-3 .trumpet {
+  height: 210px;
+  position: absolute;
+  left: 60px;
+  top: 100px;
+}
+@media screen and (min-width: 992px) {
+  .benefits__container .benefits__info-1, .benefits__container .benefits__info-2, .benefits__container .benefits__info-3 {
+    width: 420px;
+    padding: 0 35px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 992px) {
+  .benefits__container .benefits__info-1:before, .benefits__container .benefits__info-2:before, .benefits__container .benefits__info-3:before {
+    content: "";
+    width: 330px;
+    position: absolute;
+    bottom: 0;
+  }
+}
+.benefits__container .benefits__info-3 {
+  background: #FFFFFF;
+  flex-grow: 1;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.benefits__container .benefits__info-1:before {
+  border: 2px solid #FB3B64;
+}
+.benefits__container .benefits__info-2:before {
+  border: 2px solid #08A6E4;
+}
+.benefits__container .benefits__info-3:before {
+  border: 2px solid #55DFB4;
+}
+
+.benefits__title {
+  font-size: 2em;
+}
+
+.benefits__text {
+  font-size: 1em;
+  padding: 30px 0 50px 0;
+}
+
+.benefit-2 {
+  display: flex;
+  justify-content: flex-end;
+}
+@media screen and (min-width: 992px) {
+  .benefit-2 {
+    flex-direction: row;
+  }
+}
+
+.benefit-3 {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  background: none;
+  padding: 0;
+}
+
 footer {
   height: 90px;
   display: flex;
