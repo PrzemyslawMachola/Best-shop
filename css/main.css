@@ -766,14 +766,28 @@ body {
 }
 
 footer {
+  box-shadow: 0px -5px 40px #00000029;
+}
+
+.footer__container {
   height: 90px;
   display: flex;
-  justify-content: center;
-  box-shadow: 0px -5px 40px var(--color-grey-shadow);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
-footer .logo__footer {
+
+.logo__footer {
   font-weight: 300;
   font-size: 1.6em;
-  color: var(--color-blue);
+  color: #08A6E4;
+}
+
+.copyright {
+  font-size: 0.8em;
+  color: #A5A5A5;
 }
 /*# sourceMappingURL=main.css.map */

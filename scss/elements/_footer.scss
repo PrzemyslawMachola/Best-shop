@@ -1,12 +1,25 @@
 footer {
+  box-shadow: 0px -5px 40px #00000029;
+}
+
+.footer__container {
   height: 90px;
   display: flex;
-  justify-content: center;
-  box-shadow: 0px -5px 40px var(--color-grey-shadow);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
 
-  .logo__footer {
-    font-weight: 300;
-    font-size: 1.6em;
-    color: var(--color-blue);
-  }
+.logo__footer {
+  font-weight: 300;
+  font-size: 1.6em;
+  color: $color-main;
+}
+
+.copyright {
+  font-size: 0.8em;
+  color: $color-text-accent;
 }
