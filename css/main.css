@@ -532,6 +532,153 @@ body {
   }
 }
 
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing__container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1160px) {
+  .pricing__container {
+    flex-direction: row;
+  }
+}
+
+.pricing__title {
+  font-size: 2em;
+  margin-top: 100px;
+  padding: 0 30px;
+}
+@media screen and (min-width: 768px) {
+  .pricing__title {
+    padding: 0;
+  }
+}
+
+.pricing__column-1, .pricing__column-2, .pricing__column-3 {
+  width: 340px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin: 50px 30px;
+  position: relative;
+}
+@media screen and (min-width: 1160px) {
+  .pricing__column-1, .pricing__column-2, .pricing__column-3 {
+    padding: 35px 0 80px 0;
+    margin: 50px 30px;
+    flex-direction: column;
+  }
+}
+
+.pricing__column-1 {
+  border-color: #FB3B64;
+}
+
+.pricing__column-2 {
+  border-color: #08A6E4;
+  transform: scale(1.1);
+}
+
+.pricing__column-3 {
+  border-color: #55DFB4;
+}
+
+.price-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-variant {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.price-1, .price-2, .price-3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3em;
+  font-weight: 300;
+  padding: 14px 0 5px;
+}
+
+.price-1 {
+  color: #FB3B64;
+}
+
+.price-2 {
+  color: #08A6E4;
+}
+
+.price-3 {
+  color: #55DFB4;
+}
+
+.price__description {
+  font-size: 0.7em;
+  font-weight: 700;
+}
+
+.features {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media screen and (min-width: 1160px) {
+  .features {
+    margin-top: 50px;
+  }
+}
+
+.feature {
+  font-family: var(--font-open-sans);
+  font-size: 0.9em;
+  line-height: 2.5em;
+  text-align: center;
+}
+
+.included::before {
+  content: url("../assets/Ckechmark-1.svg");
+  padding-right: 10px;
+}
+
+.not-included::before {
+  content: url("../assets/Close.svg");
+  padding-right: 10px;
+}
+
+.pricing__button-1, .pricing__button-2, .pricing__button-3 {
+  font-family: "Open Sans", sans-serif;
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: 25px;
+  padding: 16px 57px;
+  text-decoration: none;
+  position: absolute;
+  bottom: -25px;
+}
+
+.pricing__button-1 {
+  background: #FB3B64;
+}
+
+.pricing__button-2 {
+  background: #08A6E4;
+}
+
+.pricing__button-3 {
+  background: #55DFB4;
+}
+
 footer {
   height: 90px;
   display: flex;

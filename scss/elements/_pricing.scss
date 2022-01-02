@@ -1,0 +1,123 @@
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pricing__container {
+  display: flex;
+  flex-direction: column;
+  @include desktop {
+    flex-direction: row;
+  }
+}
+.pricing__title {
+  font-size: 2em;
+  margin-top: 100px;
+  padding: 0 30px;
+  @include tablet {
+    padding: 0;
+  }
+}
+
+.pricing__column-1, .pricing__column-2, .pricing__column-3 {
+  width: 340px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 15px;
+  box-sizing: border-box;
+
+  margin: 50px 30px;
+  position: relative;
+  @include desktop {
+    padding: 35px 0 80px 0;
+    margin: 50px 30px;
+    flex-direction: column;
+  }
+}
+.pricing__column-1 {
+  border-color: $color-secondary;
+}
+.pricing__column-2 {
+  border-color: $color-main;
+  transform: scale(1.1);
+}
+.pricing__column-3 {
+  border-color: $color-third;
+}
+
+.price-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-variant {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+.price-1, .price-2, .price-3 {
+  font-family: $font-open-sans;
+  font-size: 3em;
+  font-weight: 300;
+  padding: 14px 0 5px;
+}
+.price-1 {
+  color: $color-secondary;
+}
+.price-2 {
+  color: $color-main;
+}
+.price-3 {
+  color: $color-third;
+}
+.price__description {
+  font-size: 0.7em;
+  font-weight: 700;
+}
+.features {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @include desktop {
+    margin-top: 50px;
+  }
+}
+.feature {
+  font-family: var(--font-open-sans);
+  font-size: 0.9em;
+  line-height: 2.5em;
+  text-align: center;
+}
+
+.included::before {
+  content: url("../assets/Ckechmark-1.svg");
+  padding-right: 10px;
+}
+.not-included::before {
+  content: url("../assets/Close.svg");
+  padding-right: 10px;
+}
+
+.pricing__button-1, .pricing__button-2, .pricing__button-3 {
+  font-family: $font-open-sans;
+  color: $color-text-buttons;
+  font-weight: 700;
+  border-radius: 25px;
+  padding: 16px 57px;
+  text-decoration: none;
+  position: absolute;
+  bottom: -25px;
+}
+.pricing__button-1 {
+  background: $color-secondary;
+}
+.pricing__button-2 {
+  background: $color-main;
+}
+.pricing__button-3 {
+  background: $color-third;
+}
