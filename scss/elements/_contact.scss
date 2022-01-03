@@ -33,6 +33,14 @@
       justify-content: space-between;
       font-family: $font-open-sans;
       color: $color-text-accent;
+      @include desktop {
+        flex-direction: row;
+      }
+    }
+
+    .email__box, .phone__box {
+      display: flex;
+      flex-direction: row;
     }
 
     .email, .phone {
@@ -53,6 +61,9 @@
   border: none;
   border-bottom: 1px solid $color-text-accent;
   margin-bottom: 40px;
+  &:active {
+    border: 1px solid $color-main-shadow;
+  }
 }
 
 .input__label {
