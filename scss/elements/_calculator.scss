@@ -118,9 +118,13 @@
     }
   }
 
-  .form__checkbox {
+  @include checkbox;
+
+  .checkbox {
+    margin-bottom: 10px;
     .consent__text {
       padding-top: 4px;
+      color: $color-dark-grey;
     }
   }
 
@@ -145,6 +149,8 @@
       align-items: center;
       color: $color-text-buttons;
       font-size: 0.875rem;
+      display: flex;
+      justify-content: space-between;
       // display: none;
 
       &.open {
@@ -158,7 +164,7 @@
       margin-top: 22px;
       padding: 8px 20px;
       background-color: $color-main;
-      display: block;
+      // display: block;
 
       .total__price {
         font-size: 1.25rem;
@@ -170,6 +176,7 @@
       padding: 6px 20px;
       background-color: $color-third;
       margin-bottom: 8px;
+
 
       .item {
         &__price {

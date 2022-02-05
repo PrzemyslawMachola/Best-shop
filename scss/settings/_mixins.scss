@@ -13,3 +13,39 @@
     @content;
   }
 }
+@mixin checkbox {
+  .checkbox {
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 75px;
+    font-family: $font-open-sans;
+    font-size: 0.8em;
+    font-weight: 300;
+    color: $color-text-accent;
+    text-transform: none;
+
+    & input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    & span {
+      height: 20px;
+      width: 20px;
+      border: 1px solid $color-text-accent;
+      border-radius: 3px;
+      cursor: pointer;
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+
+    & input:checked + span {
+      background-image: url(../../assets/Checkmark.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

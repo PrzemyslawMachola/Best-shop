@@ -787,8 +787,43 @@ body {
 .calc__select.open .select__dropdown {
   display: block;
 }
-.calc .form__checkbox .consent__text {
+.calc .checkbox {
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 75px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #A5A5A5;
+  text-transform: none;
+}
+.calc .checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.calc .checkbox span {
+  height: 20px;
+  width: 20px;
+  border: 1px solid #A5A5A5;
+  border-radius: 3px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+.calc .checkbox input:checked + span {
+  background-image: url(../../assets/Checkmark.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.calc .checkbox {
+  margin-bottom: 10px;
+}
+.calc .checkbox .consent__text {
   padding-top: 4px;
+  color: #13253B;
 }
 .calc__summary {
   width: 100%;
@@ -809,6 +844,8 @@ body {
   align-items: center;
   color: #FFFFFF;
   font-size: 0.875rem;
+  display: flex;
+  justify-content: space-between;
 }
 .calc__summary .summary__total.open,
 .calc__summary .list__item.open {
@@ -820,7 +857,6 @@ body {
   margin-top: 22px;
   padding: 8px 20px;
   background-color: #08A6E4;
-  display: block;
 }
 .calc__summary .summary__total .total__price {
   font-size: 1.25rem;
@@ -909,14 +945,6 @@ body {
   letter-spacing: 0.5em;
 }
 
-.checkbox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
 .checkbox {
   cursor: pointer;
   display: flex;
@@ -927,7 +955,13 @@ body {
   color: #A5A5A5;
   text-transform: none;
 }
-
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
 .checkbox span {
   height: 20px;
   width: 20px;
@@ -937,7 +971,6 @@ body {
   flex-shrink: 0;
   margin-right: 10px;
 }
-
 .checkbox input:checked + span {
   background-image: url(../../assets/Checkmark.svg);
   background-position: center;
