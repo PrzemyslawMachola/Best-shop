@@ -764,7 +764,6 @@ body {
   top: 9px;
 }
 .calc__select .select__dropdown {
-  display: none;
   position: absolute;
   z-index: 1;
   background-color: white;
@@ -781,10 +780,10 @@ body {
 .calc__select .select__dropdown li:hover {
   background-color: #F7F7F7;
 }
-.calc__select.open .select__input::after {
+.calc__select .select__open::after {
   transform: rotate(180deg);
 }
-.calc__select.open .select__dropdown {
+.calc__select .select__open .select__dropdown {
   display: block;
 }
 .calc .checkbox {
@@ -857,6 +856,7 @@ body {
   margin-top: 22px;
   padding: 8px 20px;
   background-color: #08A6E4;
+  display: none;
 }
 .calc__summary .summary__total .total__price {
   font-size: 1.25rem;
@@ -866,10 +866,15 @@ body {
   padding: 6px 20px;
   background-color: #55DFB4;
   margin-bottom: 8px;
+  display: none;
 }
 .calc__summary .list__item .item__price {
   font-weight: 700;
   font-size: 1.125rem;
+}
+
+.d-none {
+  display: none;
 }
 
 .contact {

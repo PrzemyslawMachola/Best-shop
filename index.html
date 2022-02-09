@@ -113,7 +113,7 @@
         <div class="pricing__column-1">
             <div class="price-header">
                 <p class="price-variant">Basic</p>
-                <p class="price-1">$0</p>
+                <p class="price-1" data-variant="basic">$0</p>
                <p class="price__description"><br></p>
             </div>
             <div class="features">
@@ -129,7 +129,7 @@
         <div class="pricing__column-2 professional">
             <div class="price-header">
                 <p class="price-variant">Professional</p>
-                <p class="price-2">$25</p>
+                <p class="price-2" data-variant="professional">$25</p>
                 <p class="price__description">Limited offer</p>
             </div>
             <div class="features">
@@ -145,7 +145,7 @@
         <div class="pricing__column-3">
             <div class="price-header">
                 <p class="price-variant">Premium</p>
-                <p class="price-3">$60</p>
+                <p class="price-3" data-variant="premium">$60</p>
                 <p class="price__description">Limited offer</p>
             </div>
             <div class="features">
@@ -176,7 +176,7 @@
             Choose package
           </div>
 
-          <ul class="select__dropdown">
+          <ul class="select__dropdown d-none">
             <li data-value="basic">Basic</li>
             <li data-value="professional">Professional</li>
             <li data-value="premium">Premium</li>
@@ -200,12 +200,12 @@
 
       <div class="calc__summary">
         <ul>
-          <li class="list__item" data-id="products">
+          <li class="list__item" data-id="products" data-price="0.5">
             <span class="item__type">Products</span>
             <span class="item__calc">20 * $0.5</span>
             <span class="item__price">$10</span>
           </li>
-          <li class="list__item" data-id="orders">
+          <li class="list__item" data-id="orders" data-price="0.5">
             <span class="item__type">Orders</span>
             <span class="item__calc">20 * $0.5</span>
             <span class="item__price">$10</span>
@@ -215,11 +215,11 @@
             <span class="item__calc">Premium</span>
             <span class="item__price">$10</span>
           </li>
-          <li class="list__item" data-id="accounting">
+          <li class="list__item" data-id="accounting" data-price="10">
             <span class="item__type">Accounting</span>
             <span class="item__price">$10</span>
           </li>
-          <li class="list__item" data-id="terminal">
+          <li class="list__item" data-id="terminal" data-price="10">
             <span class="item__type">Terminal</span>
             <span class="item__price">$10</span>
           </li>
@@ -274,8 +274,10 @@
         </div>
     </div>
 </footer>
+
+<script src="js/app.js" type="text/javascript"></script>
 </body>
 
-<script src="js/app.js" type="text/javascript" ></script>
+
 
 </html>
